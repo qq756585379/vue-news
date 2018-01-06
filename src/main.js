@@ -8,6 +8,7 @@ import axios from 'axios';
 import store from './vuex/store';
 import filters from './filters/index';
 import Loading from './components/loading';
+
 // 轮播图插件 https://www.npmjs.com/package/vue-awesome-swiper
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 
