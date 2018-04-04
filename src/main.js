@@ -43,7 +43,6 @@ Vue.prototype.$http = axios;  // 其他页面在使用axios的时候直接  this
 
 // axios.defaults.baseURL = (process.env.NODE_ENV !== 'production' ? config.dev.httpUrl : config.build.httpUrl);
 // axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
-// axios.defaults.baseURL = '';
 
 /* eslint-disable no-new */
 new Vue({

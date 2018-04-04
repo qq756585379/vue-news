@@ -19,29 +19,30 @@
   import FooterView from './components/Footer.vue';
   import Home from './components/Home.vue';
   import {mapGetters} from 'vuex';
+
   export default {
     computed: mapGetters(['headShow', 'footerShow', 'isloading']),
-    mounted () {
+    mounted() {
       var path = this.$route.path.substring(1);
       this.headerChange(path);
       this.footerChange(path);
     },
     watch: {
-      $route (to) {
+      $route(to) {
         var path = to.path.substring(1);
         this.headerChange(path);
         this.footerChange(path);
       }
     },
     methods: {
-      headerChange (path) {
+      headerChange(path) {
         if (path === 'user-info' || path === 'user-reg' || path === 'user-login' || path.indexOf('article') !== -1) {
           this.$store.dispatch('SHOW_HEAD_FAIL');
         } else {
           this.$store.dispatch('SHOW_HEAD_SUCC');
         }
       },
-      footerChange (path) {
+      footerChange(path) {
         if (path.indexOf('article') === -1) {
           this.$store.dispatch('showFooter');
         } else {
