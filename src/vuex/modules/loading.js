@@ -19,10 +19,10 @@ const actions = {
 };
 
 const mutations = {
-  [HIDE_LOADING] (state) {
+  [HIDE_LOADING](state) {
     state.isloading = false;
   },
-  [SHOW_LOADING] (state) {
+  [SHOW_LOADING](state) {
     state.isloading = true;
   }
 };
